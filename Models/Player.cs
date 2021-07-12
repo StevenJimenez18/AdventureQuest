@@ -12,21 +12,21 @@ namespace AdventureQuest.Models
         [Key]
         int PlayerId { get; set; }
 
-        string Name { get; set; }
+        public string Name { get; set; }
 
-        string PlayerType { get; set; }
+        public string PlayerType { get; set; }
 
-        int Attack;
+        public int Attack;
 
-        int Defense; 
+        public int Defense; 
 
-        int Health;
+        public int Health;
 
-        int Experience;
+        public int Experience;
 
-        int Level;
+        public int Level;
 
-        public Player(string aName, string aPlayerType)
+        public Player(string aName = "Defualt", string aPlayerType ="Defualt")
         {
             this.Name = aName;
 
