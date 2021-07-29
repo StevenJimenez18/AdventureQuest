@@ -12,54 +12,55 @@ namespace AdventureQuest.Models
         [Key]
         int PlayerId { get; set; }
 
-        public string Name { get; set; }
+        public string name { get; set; }
 
-        public string PlayerType { get; set; }
+        public string playerType { get; set; }
 
-        public int Attack;
+        public int attack { get; set; }
 
-        public int Defense; 
+        public int defense { get; set; }
 
-        public int Health;
+        public int health { get; set; }
 
-        public int Experience;
+        public int experience { get; set; }
 
-        public int Level;
+        public int level { get; set; }
 
         public Player(string aName = "Defualt", string aPlayerType ="Defualt")
         {
-            this.Name = aName;
+            this.name = aName;
 
-            this.PlayerType = aPlayerType;
+            this.playerType = aPlayerType;
             
 
             if(aPlayerType == "warrior")
             {
-                this.Attack = 75;
-                this.Defense = 25;
-                this.Health = 50;
+                this.attack = 75;
+                this.defense = 25;
+                this.health = 50;
 
             }
 
             if (aPlayerType == "orc")
             {
-                this.Attack = 35;
-                this.Defense = 100;
-                this.Health = 50;
+                this.attack = 35;
+                this.defense = 100;
+                this.health = 50;
             }
 
             if (aPlayerType == "mage")
             {
-                this.Attack = 25;
-                this.Defense = 15;
-                this.Health = 100;
+                this.attack = 25;
+                this.defense = 15;
+                this.health = 100;
             }
             
 
-            this.Experience = 0;
+            this.experience = 0;
 
-            this.Level = 0;
+            this.level = 1;
         }
 
+       
     }
 }
