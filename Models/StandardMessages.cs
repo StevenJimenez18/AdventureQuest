@@ -9,5 +9,10 @@ namespace AdventureQuest.Models
     class StandardMessages
     {
         //This class will handle all stanrdard messages
+
+        static void Temp()
+        {
+
+        }
     }
 }

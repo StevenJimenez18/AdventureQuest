@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Models\Enemy.cs" />
     <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\StandardMessages.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
