@@ -203,5 +203,10 @@ namespace AdventureQuest
         {
             //restore health
         }
+
+        static void Temp()
+        {
+
+        }
     }
 }
