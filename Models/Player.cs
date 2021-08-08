@@ -7,30 +7,17 @@ using System.Threading.Tasks;
 
 namespace AdventureQuest.Models
 {
-    public class Player
+    public class Player : CharacterModel
     {
-        [Key]
-        int PlayerId { get; set; }
-
+        
         public string name { get; set; }
 
-        public string playerType { get; set; }
-
-        public int attack { get; set; }
-
-        public int defense { get; set; }
-
-        public int health { get; set; }
-
-        public int experience { get; set; }
-
-        public int level { get; set; }
 
         public Player(string aName = "Defualt", string aPlayerType ="Defualt")
         {
             this.name = aName;
 
-            this.playerType = aPlayerType;
+            this.Type = aPlayerType;
             
 
             if(aPlayerType == "warrior")
@@ -50,9 +37,9 @@ namespace AdventureQuest.Models
 
             if (aPlayerType == "mage")
             {
-                this.attack = 25;
+                this.attack = 100;
                 this.defense = 15;
-                this.health = 100;
+                this.health = 25;
             }
             
 

@@ -15,7 +15,7 @@ namespace AdventureQuest
             Console.WriteLine("Welcome to Adventure Quest.");
             Player newPlayer = CreatePlayer();
             Console.WriteLine($"Hello: {newPlayer.name}");
-            Console.WriteLine($"Your player type is {newPlayer.playerType}");
+            Console.WriteLine($"Your player type is {newPlayer.Type}");
             Console.WriteLine($"your attack power is {newPlayer.attack}");
             Console.WriteLine($"your defense power is {newPlayer.defense}");
             Menu(newPlayer);
@@ -101,6 +101,10 @@ namespace AdventureQuest
 
         static void Menu(Player player)
         {
+            
+            // explore, train, heal, fight boss (countdown to boss)
+
+
             Console.WriteLine("What would you like to do?");
             Console.Write("1.Explore 2.Eat 3.Rest: ");
             int playerChoice = Convert.ToInt32(Console.ReadLine());
@@ -148,7 +152,7 @@ namespace AdventureQuest
 
         static void Fight(Player player, Enemy enemy)
         {
-            Console.WriteLine($"You have encountered an enemy {enemy.monsterType}");
+            Console.WriteLine($"You have encountered an enemy {enemy.Type}");
             Console.WriteLine("get ready to fight!");
             Random rand = new Random();
             while (player.health > 1 || enemy.health > 1)
@@ -158,7 +162,7 @@ namespace AdventureQuest
                 int playerResponse = Convert.ToInt32(Console.ReadLine());
                 if(playerResponse == 1)
                 {
-                    Console.WriteLine($"You attacked the enemy {enemy.monsterType}");
+                    Console.WriteLine($"You attacked the enemy {enemy.Type}");
                     if(action % 2 == 0)
                     {
                         int hitamount = player.attack - enemy.defense;
@@ -176,12 +180,12 @@ namespace AdventureQuest
                 int enemyAction = rand.Next(1, 7);
                 if(enemyAction % 2 == 1)
                 {
-                    Console.WriteLine($"The enemy {enemy.monsterType} attacked!");
+                    Console.WriteLine($"The enemy {enemy.Type} attacked!");
                     if (action % 2 == 1)
                     {
                         int hitamount = enemy.defense - player.attack;
                         player.health = player.health - hitamount;
-                        Console.WriteLine($"The enemy {enemy.monsterType}'s hit landed successfully for {hitamount}");
+                        Console.WriteLine($"The enemy {enemy.Type}'s hit landed successfully for {hitamount}");
                         Console.WriteLine($"Your health is now {player.health}");
                     }
                     else
@@ -204,9 +208,6 @@ namespace AdventureQuest
             //restore health
         }
 
-        static void Temp()
-        {
-
-        }
+        
     }
 }
